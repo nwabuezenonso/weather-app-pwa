@@ -32,6 +32,20 @@ function App() {
         onChange={ (e) => setQuery(e.target.value) }
         onKeyPress= {search}
       />
+      {/* if weather exist the it will return react component */}
+      { weather.main && (
+        <div className='city'>
+          <h2 className='city-name'>
+              <span>{weather.name}</span>
+              {/* superscript are text that are above other texts */}
+              <sup>{weather.name}</sup>
+          </h2>
+          <div className='city-temp'>
+            {Math.round(weather.main.temp)}
+            <sup>&deg;C </sup>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
