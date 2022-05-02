@@ -41,13 +41,15 @@
     -->
     <script>
       // serviceworker are javascript file that runs all the time as soon as you open the page and even when the page is closed 
+      // they can send push notification from a mobile phone 
+      // they can preview something if you are offline
       // check if the serviceworker is supported by the browser
       if('serviceWorker' in navigator){
         window.addEventListener('load', () => {
           //it create a service worker which is just a javascript file
           navigator.serviceWorker.register('./serviceworker.js')
           //returns a promise
-          .then( (reg) => console.log('success', reg.scope))
+          .then((reg) => console.log('success', reg.scope))
           .catch((err) => console.log('Failure ', err));
         })
       }
