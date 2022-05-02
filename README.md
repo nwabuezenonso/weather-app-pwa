@@ -8,7 +8,8 @@ The code repository is built as a PWA(progressive web apps) that fetch weather d
 
 In the project directory, you can run:
 
- `npm start`
+## `npm install && npm start` 
+to install all packages required for the app and to start the development server
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
